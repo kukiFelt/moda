@@ -3,6 +3,8 @@ import Banner2 from "./components/Banner2";
 import ImgBanner from "./components/ImgBanner";
 import ImgBanner2 from "./components/ImgBanner2";
 import Init from "./components/Init";
+import Shopping from "./components/Shopping";
+import TextShop from "./components/TextShop";
 
 
 export default function Home() {
@@ -15,6 +17,8 @@ export default function Home() {
       </div>
       <Banner2/>
       <ImgBanner2/>
+      <TextShop/>
+      <Shopping/>
     </div>
   );
 }
