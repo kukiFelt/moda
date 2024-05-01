@@ -2,7 +2,7 @@
 
 export default function Blog(){
     return(
-        <div className="mt-10 grid grid-cols-1 bg-slate-200">
+        <div className="mt-10 grid gap-4 justify-items-center grid-cols-1 bg-slate-200">
             <div className="mt-4">
                 <h1 className="font-bold"> Lastest from Blog</h1>
                 <h2 className="mt-2">
@@ -10,8 +10,8 @@ export default function Blog(){
                     tips, trends, and inspiration on our blog.
                 </h2>
             </div>
-            <div className="mt-8 gap-4 grid justify-items-center lg:grid-cols-3 align-items-baseline">
-                <div className="bg-white">
+            <div className="mt-8 mb-8 gap-4 grid justify-items-center lg:grid-cols-3 align-items-baseline">
+                <div className="bg-white grid-cols-1">
                 <a href="#">
                         <img src="/img/bl01.jpg" alt="" />
                     <div>
@@ -23,7 +23,7 @@ export default function Blog(){
                 </a>
                 </div>
 
-                <div className="bg-white">
+                <div className="bg-white grid-cols-1">
                 <a href="#">
                         <img src="/img/bl02.jpg" alt="" />
                     <div>
@@ -35,7 +35,7 @@ export default function Blog(){
                 </a>
                 </div>
 
-                <div className="bg-white">
+                <div className="bg-white grid grid-cols-1">
                 <a href="#">
                         <img src="/img/bl03.jpg" alt="" />
                     <div>

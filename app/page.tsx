@@ -12,7 +12,7 @@ import TextShop from "./components/TextShop";
 
 export default function Home() {
   return (
-    <div>
+    <div className="mx-2">
       <Init />
       <div className="justify-items-center grid grid-cols-1 lg:grid-cols-2">
         <Banner />
