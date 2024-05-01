@@ -2,7 +2,7 @@
 
 export default function Banner() {
     return(
-        <><div className="bg-pink-200 gird grid-cols-1 ">
+        <><div className="mt-2 bg-pink-200 gird grid-cols-1 ">
             <div className="mt-4 text-pink-500">
                 <h3>UP TO 20% DESCOUNT ON</h3>
             </div>
