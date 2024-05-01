@@ -1,6 +1,8 @@
 import Banner from "./components/Banner";
 import Banner2 from "./components/Banner2";
 import Blog from "./components/Blog";
+import Contact from "./components/Contact";
+import Finish from "./components/Finish";
 import ImgBanner from "./components/ImgBanner";
 import ImgBanner2 from "./components/ImgBanner2";
 import Init from "./components/Init";
@@ -21,6 +23,8 @@ export default function Home() {
       <TextShop/>
       <Shopping/>
       <Blog/>
+      <Contact/>
+      <Finish/>
     </div>
   );
 }
