@@ -1,6 +1,6 @@
 
 
-export default function Init() {
+export default function Nav() {
     return(
         <div>
             <h1 className="mt-4 font-bold">UTFPR<span className="font-bold text-red-600">.</span></h1>

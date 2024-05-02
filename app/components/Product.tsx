@@ -1,6 +1,6 @@
 
 
-export default function Shopping(){
+export default function Product(){
     return(
         <><div className="mt-7 gap-4 grid grid-cols-2 justify-items-center lg:grid-cols-4">
             <a href="#">

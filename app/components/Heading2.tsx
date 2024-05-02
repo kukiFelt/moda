@@ -1,6 +1,6 @@
 
 
-export default function Banner2(){
+export default function Heading2(){
     return(
         <div>
             <div className="mt-4 font-bold">

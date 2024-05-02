@@ -1,6 +1,6 @@
 
 
-export default function Banner() {
+export default function Header() {
     return(
         <><div className="mt-2 bg-pink-200 gird grid-cols-1 ">
             <div className="mt-4 text-pink-500">

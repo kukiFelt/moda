@@ -1,6 +1,6 @@
 
 
-export default function TextShop() {
+export default function Heading3() {
     return(
         <div className="mt-8">
             <h1 className="font-bold">Trending Products</h1>
