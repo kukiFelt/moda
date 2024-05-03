@@ -11,9 +11,9 @@ export default function Blog(){
                 </h2>
             </div>
             <div className="mt-8 mb-8 grid gap-4 rounded-3xl justify-items-center lg:grid-cols-3 align-items-baseline">
-                <div className="bg-white grid grid-cols-1 rounded-2xl">
+                <div className="bg-white grid grid-cols-1 rounded-lg">
                 <a href="#">
-                        <img src="/img/bl01.jpg" alt="" />
+                        <img className="rounded-t-lg" src="/img/bl01.jpg" alt="" />
                     <div>
                         <h5 className="text-red-600 font-bold">Timeless Elegance</h5>
                         <h4 className="font-bold">Mastering the Art of Capsule</h4>
@@ -23,9 +23,9 @@ export default function Blog(){
                 </a>
                 </div>
 
-                <div className="bg-white grid grid-cols-1 rounded-3xl">
+                <div className="bg-white grid grid-cols-1 rounded-lg">
                 <a href="#">
-                        <img src="/img/bl02.jpg" alt="" />
+                        <img className="rounded-t-lg" src="/img/bl02.jpg" alt="" />
                     <div>
                         <h5 className="text-red-600 font-bold">Summer Breeze</h5>
                         <h4 className="font-bold">Univeiling the Hottest Beachwear</h4>
@@ -35,9 +35,9 @@ export default function Blog(){
                 </a>
                 </div>
 
-                <div className="bg-white grid grid-cols-1 rounded-3xl">
+                <div className="bg-white grid grid-cols-1 rounded-lg">
                 <a href="#">
-                        <img src="/img/bl03.jpg" alt="" />
+                        <img className="rounded-t-lg" src="/img/bl03.jpg" alt="" />
                     <div>
                         <h5 className="text-red-600 font-bold">Power Dressing</h5>
                         <h4 className="font-bold">Navigating th World of Womens</h4>
