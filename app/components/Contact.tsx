@@ -12,21 +12,21 @@ export default function Contact() {
             </div>
 
             <div className="grid grid-cols-1">
-                <h1 className="mt-8 font-bold"> COMPANY</h1>
-                <h4 className="mt-4">Home</h4>
-                <h4 className="mt-4">About Us</h4>
-                <h4 className="mt-4">Work With Us</h4>
-                <h4 className="mt-4">Our Blog</h4>
-                <h4 className="mt-4">Terms & Consditions</h4>
+                <a href="#"><h1 className="mt-8 font-bold"> COMPANY</h1></a>
+                <a href="#"><h4 className="mt-4">Home</h4></a>
+                <a href="#"><h4 className="mt-4">About Us</h4></a>
+                <a href="#"><h4 className="mt-4">Work With Us</h4></a>
+                <a href="#"><h4 className="mt-4">Our Blog</h4></a>
+                <a href="#"><h4 className="mt-4">Terms & Consditions</h4></a>
             </div>
 
             <div className="grid grid-cols-1">
                 <h1 className="mt-8 font-bold"> USEFUL LINK</h1>
-                <h4 className="mt-4">Help</h4>
-                <h4 className="mt-4">track My Order</h4>
-                <h4 className="mt-4">Men</h4>
-                <h4 className="mt-4">Women</h4>
-                <h4 className="mt-4">Dresses</h4>
+                <a href="#"><h4 className="mt-4">Help</h4></a>
+                <a href="#"><h4 className="mt-4">track My Order</h4></a>
+                <a href="#"><h4 className="mt-4">Men</h4></a>
+                <a href="#"><h4 className="mt-4">Women</h4></a>
+                <a href="#"><h4 className="mt-4">Dresses</h4></a>
             </div>
 
         </div>
