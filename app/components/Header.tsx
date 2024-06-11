@@ -20,9 +20,11 @@ export default function Header() {
                 </h4>
             </div>
             <div>
+                <a href="/admin">
                 <button className="bg-pink-600 rounded-md border-lime-500 text-xs text-center p-2 mt-3 lg:flex ">
                     EXPLORE NOW
                 </button>
+                </a>
             </div>
         </div>
         </>
