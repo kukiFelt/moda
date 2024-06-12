@@ -30,6 +30,7 @@ export default async function ListStudent() {
     "use server"
     const  id = formData.get("id") as string;
     const response = await fetch("https://serverkuki.vercel.app/students/"+id, {method: "DELETE"});
+    revalidatePath("/admin/student")
   }
 
   return (

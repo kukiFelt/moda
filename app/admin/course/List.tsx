@@ -28,6 +28,7 @@ import { revalidatePath } from "next/cache"
       "use server"
       const  id = formData.get("id") as string;
       const response = await fetch("https://serverkuki.vercel.app/courses/"+id, {method: "DELETE"});
+      revalidatePath("/admin/course")
     }
 
     return (
