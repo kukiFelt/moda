@@ -21,7 +21,7 @@ interface IStudent {
 export default async function ListStudent() {
   const students = await list()
   async function list() {
-    revalidatePath("/admin/components/student")
+    revalidatePath("/admin/student")
     const response = await fetch("https://serverkuki.vercel.app/students")
     return response.json();
   }
