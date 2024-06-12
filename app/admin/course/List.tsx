@@ -1,3 +1,4 @@
+import { Button } from "@/components/ui/button"
 import {
     Table,
     TableBody,
@@ -23,6 +24,12 @@ import { revalidatePath } from "next/cache"
         return response.json();
     }
 
+    async function deleteCourse(formData:FormData) {
+      "use server"
+      const  id = formData.get("id") as string;
+      const response = await fetch("https://serverkuki.vercel.app/courses/"+id, {method: "DELETE"});
+    }
+
     return (
       <Table>
         <TableCaption>Lista de Cursos</TableCaption>
@@ -30,6 +37,7 @@ import { revalidatePath } from "next/cache"
           <TableRow>
             <TableHead className="w-[100px]">ID</TableHead>
             <TableHead>Nome</TableHead>
+            <TableHead>Ação</TableHead>
           </TableRow>
         </TableHeader>
         <TableBody>
@@ -37,6 +45,12 @@ import { revalidatePath } from "next/cache"
             <TableRow key={item.id}>
               <TableCell className="font-medium">{item.id}</TableCell>
               <TableCell>{item.name}</TableCell>
+              <TableCell>
+              <form>
+              <input type="text" name="id" hidden value={item.id} />
+              <Button formAction={deleteCourse} variant="destructive">Excluir</Button> 
+              </form>
+              </TableCell>
             </TableRow>
           ))}
         </TableBody>
