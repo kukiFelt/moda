@@ -18,7 +18,7 @@ import { revalidatePath } from "next/cache"
   export default async function ListCourse() {
     const courses = await list()
     async function list(){
-      revalidatePath("/admin/course")
+      revalidatePath("/admin/components/course")
       const response = await fetch("https://serverkuki.vercel.app/courses")
         return response.json();
     }
