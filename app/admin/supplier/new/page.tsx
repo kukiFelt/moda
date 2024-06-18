@@ -23,15 +23,15 @@ const FormSchema = z.object({
     // email: z.string().email({
     //     message: "Digite o email correto"
     // }),
-    description: z.string()
+    address: z.string()
 })
 
 export default function SaveSupplier() {
     const form = useForm<z.infer<typeof FormSchema>>({
         resolver: zodResolver(FormSchema),
         defaultValues: { //valor que aparece por padrão
-            name: "lucas",
-            description: "lucasogmail.com",
+            name: "",
+            address: "",
         },
     })
 
@@ -54,9 +54,9 @@ export default function SaveSupplier() {
                     name="name"
                     render={({ field }) => (
                         <FormItem>
-                            <FormLabel>Nome do livro:</FormLabel>
+                            <FormLabel>Nome do fornecedor:</FormLabel>
                             <FormControl>
-                                <Input placeholder="Digite o nome do livro" {...field} />
+                                <Input placeholder="Digite o nome do fornecedor" {...field} />
                             </FormControl>
                             <FormMessage />
                         </FormItem>
@@ -64,12 +64,12 @@ export default function SaveSupplier() {
                 />
                 <FormField
                     control={form.control}
-                    name="description"
+                    name="address"
                     render={({ field }) => (
                         <FormItem>
-                            <FormLabel>Descricao:</FormLabel>
+                            <FormLabel>Endereço</FormLabel>
                             <FormControl>
-                                <Input placeholder="Digite a descrição" {...field} />
+                                <Input placeholder="Digite o Endereço" {...field} />
                             </FormControl>
                             <FormMessage />
                         </FormItem>

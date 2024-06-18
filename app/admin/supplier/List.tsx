@@ -14,7 +14,7 @@ import { revalidatePath } from "next/cache"
   interface ISupplier{
     id:number,
     name:string,
-    description:string,
+    address:string,
   }
   
   export default async function ListSupplier() {
@@ -40,7 +40,7 @@ import { revalidatePath } from "next/cache"
           <TableRow>
             <TableHead className="w-[100px] text-center">ID</TableHead>
             <TableHead className="text-center">Nome</TableHead>
-            <TableHead className="text-center">Descrição</TableHead>
+            <TableHead className="text-center">Endereço</TableHead>
             <TableHead></TableHead>
           </TableRow>
         </TableHeader>
@@ -49,7 +49,7 @@ import { revalidatePath } from "next/cache"
             <TableRow key={item.id}>
               <TableCell className="font-medium">{item.id}</TableCell>
               <TableCell>{item.name}</TableCell>
-              <TableCell>{item.description}</TableCell>
+              <TableCell>{item.address}</TableCell>
               <TableCell>
               <form>
                 <input type="text" hidden name="id" value={item.id} />
