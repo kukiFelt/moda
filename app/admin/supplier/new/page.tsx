@@ -20,25 +20,30 @@ const FormSchema = z.object({
     name: z.string().min(2, {
         message: "Necessário mais que dois caracteres.",
     }),
+    // email: z.string().email({
+    //     message: "Digite o email correto"
+    // }),
+    description: z.string()
 })
 
-export default function SaveCourse() {
+export default function SaveSupplier() {
     const form = useForm<z.infer<typeof FormSchema>>({
         resolver: zodResolver(FormSchema),
         defaultValues: { //valor que aparece por padrão
-            name: "Cursinho",
+            name: "lucas",
+            description: "lucasogmail.com",
         },
     })
 
-    async function onSubmit(course: z.infer<typeof FormSchema>) {
+    async function onSubmit(supplier: z.infer<typeof FormSchema>) {
         const requestOptions= {
             method: "POST",
             headers: {'Content-Type': 'application/json'},
-            body: JSON.stringify(course)
+            body: JSON.stringify(supplier)
         }
-        const response = await fetch("https://serverkuki.vercel.app/courses", requestOptions)
+        const response = await fetch("https://serverkuki.vercel.app/suppliers", requestOptions)
         form.reset();
-        alert("Curso Cadastrado!")
+        alert("Fornecedor Cadastrado!")
     }
 
     return (
@@ -49,9 +54,22 @@ export default function SaveCourse() {
                     name="name"
                     render={({ field }) => (
                         <FormItem>
-                            <FormLabel>Nome:</FormLabel>
+                            <FormLabel>Nome do livro:</FormLabel>
                             <FormControl>
-                                <Input placeholder="Digite o nome do curso" {...field} />
+                                <Input placeholder="Digite o nome do livro" {...field} />
+                            </FormControl>
+                            <FormMessage />
+                        </FormItem>
+                    )}
+                />
+                <FormField
+                    control={form.control}
+                    name="description"
+                    render={({ field }) => (
+                        <FormItem>
+                            <FormLabel>Descricao:</FormLabel>
+                            <FormControl>
+                                <Input placeholder="Digite a descrição" {...field} />
                             </FormControl>
                             <FormMessage />
                         </FormItem>

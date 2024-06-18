@@ -20,29 +20,28 @@ const FormSchema = z.object({
     name: z.string().min(2, {
         message: "Necessário mais que dois caracteres.",
     }),
-    email: z.string().email({
-        message: "Digite o email correto"
-    }),
+    // email: z.string().email({
+    //     message: "Digite o email correto"
+    // }),
 })
 
-export default function SaveStudent() {
+export default function SaveProduct() {
     const form = useForm<z.infer<typeof FormSchema>>({
         resolver: zodResolver(FormSchema),
         defaultValues: { //valor que aparece por padrão
-            name: "Leozinho",
-            email: "leozinho@teste.com.br",
+            name: "",
         },
     })
 
-    async function onSubmit(student: z.infer<typeof FormSchema>) {
+    async function onSubmit(Product: z.infer<typeof FormSchema>) {
         const requestOptions= {
             method: "POST",
             headers: {'Content-Type': 'application/json'},
-            body: JSON.stringify(student)
+            body: JSON.stringify(Product)
         }
-        const response = await fetch("https://serverkuki.vercel.app/student", requestOptions)
+        const response = await fetch("https://serverkuki.vercel.app/products", requestOptions)
         form.reset();
-        alert("Estudante Cadastrado!")
+        alert("Produto Cadastrado!")
     }
 
     return (
@@ -53,15 +52,15 @@ export default function SaveStudent() {
                     name="name"
                     render={({ field }) => (
                         <FormItem>
-                            <FormLabel>Nome:</FormLabel>
+                            <FormLabel>Nome do Produto</FormLabel>
                             <FormControl>
-                                <Input placeholder="Digite o nome do estudante" {...field} />
+                                <Input placeholder="Digite o nome do produto" {...field} />
                             </FormControl>
                             <FormMessage />
                         </FormItem>
                     )}
                 />
-                <FormField
+                {/* <FormField
                     control={form.control}
                     name="email"
                     render={({ field }) => (
@@ -73,7 +72,7 @@ export default function SaveStudent() {
                             <FormMessage />
                         </FormItem>
                     )}
-                />
+                /> */}
                 <Button type="submit">Salvar</Button>
             </form>
         </Form>
