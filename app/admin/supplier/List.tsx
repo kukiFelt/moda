@@ -38,9 +38,9 @@ import { revalidatePath } from "next/cache"
         <TableCaption>Lista de Fonecedores</TableCaption>
         <TableHeader>
           <TableRow>
-            <TableHead className="w-[100px]">ID</TableHead>
-            <TableHead>Nome</TableHead>
-            <TableHead>Descrição</TableHead>
+            <TableHead className="w-[100px] text-center">ID</TableHead>
+            <TableHead className="text-center">Nome</TableHead>
+            <TableHead className="text-center">Descrição</TableHead>
             <TableHead></TableHead>
           </TableRow>
         </TableHeader>

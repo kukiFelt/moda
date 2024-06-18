@@ -7,9 +7,9 @@ export default function Aside({ className }: any) {
         <div className={cn("hidden md:block size-1/6", className)}>
             <div className="flex flex-col space-y-2" >
                 <h2 className="font-bold">Dasboard</h2>
-                <a href="">
+                <a href="/admin">
                     <Button variant="ghost">
-                        <Home className="mr-2 text-center" />
+                        <Home className="mr-2" />
                         Home
                     </Button>
                 </a>
